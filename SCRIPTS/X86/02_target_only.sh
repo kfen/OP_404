@@ -2,6 +2,9 @@
 
 sed -i 's/O2/O2 -march=x86-64-v2/g' include/target.mk
 
+# 修改openwrt登陆地址,把下面的192.168.2.2修改成你想要的就可以了
+sed -i 's/192.168.1.1/192.168.100.1/g' ./package/base-files/files/bin/config_generate
+
 # libsodium
 sed -i 's,no-mips16 no-lto,no-mips16,g' feeds/packages/libs/libsodium/Makefile
 
